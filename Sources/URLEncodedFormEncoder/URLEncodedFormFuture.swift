@@ -93,7 +93,7 @@ extension URLEncodedFormFuture {
                 return urlQueryItems
             }
         case .nestedDictionary(let refDictionary):
-            return try refDictionary.dictionary.flatMap { (key, value) in
+            return try refDictionary.dictionary.flatMap { (key, value) -> [URLQueryItem] in
                 if keySpace.isEmpty {
                     return try value.urlQueryItems(keySpace: key, options: options)
                 } else {
