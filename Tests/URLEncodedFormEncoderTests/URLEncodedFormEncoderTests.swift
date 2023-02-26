@@ -132,7 +132,7 @@ final class URLEncodedFormEncoderTests: XCTestCase {
             var key: [[String: String]]
         }
 
-        let test = Test(key: [["a":"a"], ["b":"b"], ["c":"c"]])
+        let test = Test(key: [["a": "a"], ["b": "b"], ["c": "c"]])
 
         let encoder = URLEncodedFormEncoder()
 

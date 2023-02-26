@@ -81,7 +81,12 @@ extension URLEncodedFormFuture {
                         value: try urlQueryItems.lazy
                             .compactMap {
                                 guard $0.name == keySpace else {
-                                    throw URLEncodedFormEncodingError.nestedArrayFlatMapError(.init(codingPath: [], debugDescription: "Nested value on array not allowed when using commaSeparated option: \(keySpace)"))
+                                    throw URLEncodedFormEncodingError.nestedArrayFlatMapError(
+                                        .init(
+                                            codingPath: [],
+                                            debugDescription: "Nested value on array not allowed when using commaSeparated option: \(keySpace)"
+                                        )
+                                    )
                                 }
 
                                 return $0.value
@@ -89,7 +94,7 @@ extension URLEncodedFormFuture {
                             .joined(separator: ",")
                     )
                 ]
-            case .brackets(_), .custom(_), .none, .notAllowed:
+            case .brackets, .custom, .none, .notAllowed:
                 return urlQueryItems
             }
         case .nestedDictionary(let refDictionary):
