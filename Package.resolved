@@ -2,12 +2,12 @@
   "object": {
     "pins": [
       {
-        "package": "TopLevelCoder",
-        "repositoryURL": "https://github.com/shizukusoft/swift-top-level-coder.git",
+        "package": "TopLevelCoders",
+        "repositoryURL": "https://github.com/shizukusoft/swift-top-level-coders.git",
         "state": {
           "branch": null,
-          "revision": "d5e1cb8b85309c422aaf6b55108d8034dea7037e",
-          "version": "0.0.1"
+          "revision": "c5e0bd8b95ccecee13c3b84f43751db0be4e7072",
+          "version": "0.0.2"
         }
       }
     ]
